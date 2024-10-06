@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    background-color: rgb(143, 143, 239);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: 1px solid rgb(174, 245, 174);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    background-color: #56599438;
+    transition: padding 0.1s ease-in-out, border-width 0.1s ease-in-out;
+    z-index: 99;
+}
+
+.btn[data-sound="crash"] {
+    transform: translate(53px, 50px);
+}
+
+.btn[data-sound="floor-tom"] {
+    transform: translate(88px, 233px);
+}
+
+.btn[data-sound="high-tom"] {
+    transform: translate(154px, 157px);
+}
+
+.btn[data-sound="mid-tom"] {
+    transform: translate(236px, 165px);
+}
+
+.btn[data-sound="hi-hat-close"] {
+    transform: translate(357px, 95px);
+}
+
+.btn[data-sound="hi-hat-open"] {
+    transform: translate(294px, 95px);
+}
+
+.btn[data-sound="ride"] {
+    transform: translate(115px, 50px);
+}
+
+.btn[data-sound="snare"] {
+    transform: translate(304px, 193px);
+}
+
+.btn[data-sound="kick"] {
+    transform: translate(204px, 237px);
+}
+
+.btn.active {
+    padding: 8px 14px;
+    border-width: 2px;
+}
+
+.drum-kit-container {
+    position: relative;
+    height: 382px;
+    width: 447px;
+}
+
+.drum-kit-container img {
+    position: absolute;
+}
+
+.drum-kit-container .hi-hat-top {
+    transform: translate(283px, 116px);
+}
+
+.drum-kit-container .crash {
+    transform: translate(42px, 78px) rotate(-7.2deg);
+}
+
+.hi-hat-top,
+.crash {
+    transition: transform 0.1s ease;
+}
